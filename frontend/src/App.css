@@ -1,0 +1,49 @@
+html, body {
+  background-color: black;
+  z-index: -1;
+  padding: 0;
+  margin: 0;
+  opacity: 0.9;
+}
+
+
+.shiny-text {
+  color: #01ffe1e9; /* Adjust this color to change intensity/style */
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+  animation: shine 2.5s linear infinite;
+}
+.shiny-text:hover {
+  cursor: pointer;
+  color: #00eaff;
+  text-shadow: 0 0 1px #00eaff;
+  transform: translateY(-1px);
+}
+
+/* 🔹 Active: quick click press effect */
+.shiny-text:active {
+  transform: scale(1.05);
+  color: #00bcd4;
+  text-shadow: 0 0 10px #00bcd4;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
+.shiny-text.disabled {
+  animation: none;
+}

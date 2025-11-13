@@ -1,0 +1,67 @@
+header {
+  position: relative;
+  z-index: 10;
+  background-color: rgb(19, 249, 234, 0.03);
+  border-bottom:1px solid rgb(19, 249, 234, 0.2);
+ 
+  color: white;
+  width: 100%; /* Changed from 100vw to prevent horizontal overflow */
+  height: 10%; /* reduced from 100vh — header shouldn't take full screen */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vw;
+   box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+.name-tag {
+  font-size: 2.2vw;
+  font-weight: bold;
+  padding: 1vw 2vw;
+  border-radius: 2vw;
+}
+
+
+
+.cart-btn {
+ position: fixed;
+  right: 4%;
+  width: 4vw;
+  height: 4vw;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.cart-btn img {
+  filter: invert(1);
+}
+.cart-btn:hover img {
+  filter: invert(0.5);
+}
+.cart-btn:active img {
+  transform: scale(1.2);
+  filter: brightness(2);
+}
+
+.user-btn {
+  position: fixed;
+  right: 2px;
+  width: 4vw;
+  height: 4vw;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.user-btn img {
+  filter: invert(1);
+}
+
+.user-btn:hover img {
+  filter: invert(0.5);
+}
+.user-btn:active img {
+  transform: scale(1.2);
+  filter: brightness(2);
+}
+
+
