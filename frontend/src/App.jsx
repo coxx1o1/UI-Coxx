@@ -7,6 +7,7 @@ import Header from "./components/Header.jsx";
 import Nav from "./components/nav.jsx";
 import Component from "./components/Component.jsx";
 import LiquidChrome from "./components/LiquidChrome.jsx";
+import Test from "./components/test.jsx";
 
 function Home() {
   return (
@@ -20,6 +21,7 @@ function Home() {
 
 function App() {
   return (
+    // <Test/>
     <UIProvider>
     <Router>
       <Routes>

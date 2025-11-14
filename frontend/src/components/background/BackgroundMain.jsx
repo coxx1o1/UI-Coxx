@@ -7,15 +7,20 @@ import Background3 from "./Background3";
 const BackgroundMain = () => {
   const { selectedComponent } = useContext(UIContext);
 
-  console.log("Selected Component:", selectedComponent); // Debugging log
+  const renderBackground = () => {
+    switch (selectedComponent) {
+      case "Background1":
+        return <Background1 />;
+      case "Background2":
+        return <Background2 />; 
+      case "Background3":
+        return <Background3 />;
+      default:
+        return null;
+    }
+  };
 
-  return (
-    <div>
-      {selectedComponent === "Background1" && <Background1 />}
-      {selectedComponent === "Background2" && <Background2 />}
-      {selectedComponent === "Background3" && <Background3 />}
-    </div>
-  );
+  return <div className="background-container">{renderBackground()}</div>;
 };
 
 export default BackgroundMain;

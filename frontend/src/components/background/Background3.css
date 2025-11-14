@@ -1,26 +1,37 @@
 .background3 {
-  position: relative;
+  position: absolute; /* same system as BG1 & BG2 */
+  top: 0;
+  left: 0;
+
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 255, 0.2); /* Temporary background color for debugging */
+
+  background: rgba(0, 0, 255, 0.2); /* debug color */
   overflow: hidden;
-  z-index: 0;
+  z-index: 1; /* keep above section but below UI elements */
 }
 
+/* star dot */
 .background3::after {
   content: "";
   position: absolute;
+  top: 100%; /* start animation BELOW the section */
+  left: 50%;
+
   width: 1px;
   height: 1px;
+
   background: white;
+
   animation: animStar 50s linear infinite;
 }
 
+/* animation */
 @keyframes animStar {
   from {
-    transform: translateY(0px);
+    transform: translateY(0);
   }
   to {
-    transform: translateY(-2000px);
+    transform: translateY(-200vh); /* safer than px */
   }
 }
