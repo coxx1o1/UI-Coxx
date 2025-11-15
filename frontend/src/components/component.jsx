@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { UIContext } from "../UIContext";  
+import { UIContext } from "../UIContext";
 import BackgroundMain from "./background/BackgroundMain.jsx";
 import "./component.css";
 import MainSection from "./MainSection";
@@ -20,19 +20,23 @@ function Component() {
             Background
           </h2>
           {openList === "Background" && (
-            <ul>
-              <li onClick={() => setSelectedComponent("Background1")}>Background1</li>
-              <li onClick={() => setSelectedComponent("Background2")}>Background2</li>
-              <li onClick={() => setSelectedComponent("Background3")}>Background3</li>
+            <ul className="">
+              <li onClick={() => setSelectedComponent("Background1")}>
+                Background1
+              </li>
+              <li onClick={() => setSelectedComponent("Background2")}>
+                Background2
+              </li>
+              <li onClick={() => setSelectedComponent("Background3")}>
+                Background3
+              </li>
             </ul>
           )}
         </ul>
       </aside>
 
       <main className="main">
-        <MainSection 
-        title="Main Display"
-        className="section">
+        <MainSection title="Main Display">
           <h1 className="shiny-text">Main Preview</h1>
           <BackgroundMain />
         </MainSection>
@@ -42,5 +46,3 @@ function Component() {
 }
 
 export default Component;
-
-
