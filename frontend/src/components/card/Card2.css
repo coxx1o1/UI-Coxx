@@ -1,0 +1,74 @@
+.card2 {
+  position: relative;
+  overflow: hidden;
+ width: 100%;
+  max-width: 620px;       /* Bigger, wallpaper-style */
+  height: 260px;
+  /* SAME layout as card1 */
+  padding: 20px;
+  margin: 10px auto;
+  text-align: center;
+
+  border-radius: 10px;
+
+  /* Chrome animated gradient */
+  background: linear-gradient(
+    135deg,
+    #bcd3ff,
+    #96b5ff,
+    #7c94ff,
+    #96b5ff,
+    #d0dbff
+  );
+  background-size: 400% 400%;
+  animation: chromeFlow 6s ease-in-out infinite;
+
+  color: white;
+  font-family: Arial, sans-serif;
+
+  /* Chrome-like shadows */
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.25),
+    inset 0 0 25px rgba(255, 255, 255, 0.35),
+    inset 0 0 60px rgba(255, 255, 255, 0.15);
+}
+
+/* Liquid chrome highlight */
+.card2::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -40%;
+  width: 180%;
+  height: 180%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.45),
+    rgba(255, 255, 255, 0) 60%
+  );
+  animation: chromeHighlight 8s linear infinite;
+  mix-blend-mode: screen;
+}
+
+/* Animations */
+@keyframes chromeFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes chromeHighlight {
+  0% { transform: translate(-20%, -20%) rotate(0deg); }
+  100% { transform: translate(20%, 20%) rotate(360deg); }
+}
+
+/* SAME text style as card1 */
+.card2 h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card2 p {
+  font-size: 1rem;
+}

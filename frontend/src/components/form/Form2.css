@@ -1,0 +1,31 @@
+.form2 {
+  background: linear-gradient(135deg, #b37eff, #8c75ff);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 10px;
+}
+
+.form2 h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.form2 input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.form2 button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #758cff;
+  color: white;
+  cursor: pointer;
+}

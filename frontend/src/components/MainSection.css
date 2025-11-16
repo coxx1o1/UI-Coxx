@@ -1,4 +1,7 @@
 .main-section {
+  
+  justify-content: center;
+  align-items: center;
     position:relative;
   border: 2px solid cyan;
   border-radius: 10px;

@@ -1,0 +1,109 @@
+.gojo-card {
+  width: 280px;
+  height: 420px;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+
+  /* Animated Gradient Background */
+  background-image:
+    linear-gradient(
+      135deg,
+      rgba(160, 0, 255, 0.65),
+      rgba(0, 120, 255, 0.55),
+      rgba(0, 0, 0, 0.7),
+      rgba(255, 0, 80, 0.55)
+    ),
+    url("Gojo-Satoru.png");
+
+  background-size: 200% 200%, cover;
+  background-blend-mode: overlay;
+  background-position: center;
+
+  /* Smooth motion wallpaper animation */
+  animation: gradientShift 12s ease-in-out infinite alternate;
+
+  /* Clean soft shadow */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  
+}
+
+
+
+
+
+/* Gradient Animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 0%, center;
+  }
+  50% {
+    background-position: 100% 50%, center 8%;
+  }
+  100% {
+    background-position: 0% 100%, center 0%;
+  }
+}
+
+@keyframes electricFlicker {
+  0% {
+    text-shadow:
+      0 0 3px rgba(255, 255, 255, 0.9),
+      0 0 7px rgba(140, 200, 255, 0.7),
+      0 0 14px rgba(120, 180, 255, 0.5);
+  }
+  50% {
+    text-shadow:
+      0 0 2px rgba(255, 255, 255, 0.7),
+      0 0 4px rgba(140, 200, 255, 0.5),
+      0 0 10px rgba(120, 180, 255, 0.35),
+      0 0 18px rgba(120, 180, 255, 0.3);
+  }
+  100% {
+    text-shadow:
+      0 0 3px rgba(255, 255, 255, 0.9),
+      0 0 7px rgba(140, 200, 255, 0.7),
+      0 0 14px rgba(120, 180, 255, 0.5);
+  }
+}
+
+
+/* Hover effect */
+.gojo-card:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
+}
+
+/* Title */
+.gojo-card h2 {
+  margin-top: 260px;
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 2px;
+ 
+  position: relative;
+  z-index: 2;
+
+
+
+  /* Multi-layer electric edges */
+  text-shadow:
+    0 0 3px rgba(255, 255, 255, 0.8),
+    0 0 6px rgba(140, 200, 255, 0.6),
+    0 0 12px rgba(120, 180, 255, 0.4),
+    0 0 18px rgba(80, 150, 255, 0.25);
+
+  animation: electricFlicker 2.8s infinite ease-in-out;
+}
+
+
+
