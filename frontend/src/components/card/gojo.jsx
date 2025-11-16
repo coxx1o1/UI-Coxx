@@ -3,7 +3,7 @@ import "./gojo.css";
 
 const Gojo = () => {
   return (
-    <div class="gojo-card">
+    <div className="gojo-card">
       <h2>Satoru Gojo</h2>
     </div>
   );
