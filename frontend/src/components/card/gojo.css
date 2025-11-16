@@ -1,40 +1,96 @@
+/* MAIN CARD */
 .gojo-card {
-  width: 280px;
-  height: 420px;
-  border-radius: 20px;
-  padding: 20px;
-  text-align: center;
-  overflow: hidden;
   position: absolute;
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 280px;
+  height: 420px;
+  border-radius: 20px;
+  padding: 20px;
   cursor: pointer;
-
-  /* Animated Gradient Background */
-  background-image:
-    linear-gradient(
-      135deg,
-      rgba(160, 0, 255, 0.65),
-      rgba(0, 120, 255, 0.55),
-      rgba(0, 0, 0, 0.7),
-      rgba(255, 0, 80, 0.55)
-    ),
-    url("Gojo-Satoru.png");
-
-  background-size: 200% 200%, cover;
-  background-blend-mode: overlay;
-  background-position: center;
-
-  /* Smooth motion wallpaper animation */
-  animation: gradientShift 12s ease-in-out infinite alternate;
-
-  /* Clean soft shadow */
+  overflow: hidden;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  
 }
+
+/* IMAGE LAYER */
+.gojo-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("Gojo-Satoru.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  transition: 0.3s;
+}
+
+/* GRADIENT ANIMATION LAYER */
+.gojo-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(160, 0, 255, 0.65),
+    rgba(0, 120, 255, 0.55),
+    rgba(0, 0, 0, 0.7),
+    rgba(255, 0, 80, 0.55)
+  );
+  background-size: 200% 200%;
+  animation: gradientShift 12s ease-in-out infinite alternate;
+  mix-blend-mode: overlay;
+  z-index: 1;
+}
+
+/* Ensures text stays on top */
+.gojo-card * {
+  position: relative;
+  z-index: 2;
+}
+
+/* BORDER ELECTRIC HOVER EFFECT */
+.gojo-card:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+  box-shadow: 0 0 25px rgba(120, 180, 255, 0.7),
+              0 0 50px rgba(120, 180, 255, 0.4);
+}
+
+/* ELECTRIC OUTLINE ON HOVER */
+.gojo-card:hover::after {
+  box-shadow: inset 0 0 25px rgba(102, 2, 113, 0.9),
+              inset 0 0 60px rgba(255, 20, 235, 0.2);
+}
+
+/* ANIMATED GRADIENT BACKGROUND */
+@keyframes gradientShift {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 100%; }
+}
+
+/* ELECTRIC TEXT TITLE */
+.gojo-card h2 {
+    text-align: center;
+width: 100%;
+display: block;
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+
+  margin-top: 260px;
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #fff;
+  text-shadow:
+    0 0 3px rgba(255, 255, 255, 0.8),
+    0 0 6px rgba(140, 200, 255, 0.6),
+    0 0 12px rgba(120, 180, 255, 0.4),
+    0 0 18px rgba(80, 150, 255, 0.25);
+  animation: electricFlicker 2.8s infinite ease-in-out;
+}
+
 
 
 
