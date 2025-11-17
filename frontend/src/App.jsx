@@ -8,12 +8,16 @@ import Nav from "./components/nav.jsx";
 import Component from "./components/Component.jsx";
 import LiquidChrome from "./components/LiquidChrome.jsx";
 import Test from "./components/test.jsx";
+import Footer from "./components/footer.jsx"; 
+import Hero from "./components/Hero.jsx";
 
 function Home() {
   return (
-    <div>
+    <div className="home-page">
       <LiquidChrome />
       <Header />
+      <Hero />
+          <Footer />  
     </div>
   );
 }

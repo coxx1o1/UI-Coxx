@@ -1,0 +1,63 @@
+.hero-container {
+  width: 50%;
+  height: 70vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* glass card */
+.hero-glass {
+  position: relative;
+  width: 80%;
+  min-height: 380px;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.15);
+  overflow: hidden;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  
+}
+
+
+/* text */
+.hero-title { font-size: 3rem; color: #fff; text-shadow: 0 0 10px rgba(0,153,255,0.8);
+  z-index: 3; }
+.hero-subtitle { color: #dceafe; margin-top: 10px;
+  z-index: 3; }
+
+/* button */
+.hero-btn { margin-top: 25px; padding: 12px 20px; border-radius: 10px; border:none; 
+width: 50%;
+  z-index: 3; 
+}
+
+/* CHARACTER IMAGE: big, anchored to right bottom */
+.hero-character {
+  position: absolute;
+  right: 0;
+  bottom: 40px; /* increase this to move Gojo upward */
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 25px rgba(0,153,255,0.4));
+  z-index: 1;
+  user-select: none;
+  pointer-events: none;
+}
+
+
+/* optional: float animation */
+@keyframes floaty {
+  from { transform: translateY(0px); }
+  to { transform: translateY(-10px); }
+}
+.hero-character { animation: floaty 4s ease-in-out infinite alternate; }

@@ -1,9 +1,19 @@
 html, body {
-  background-color: black;
+  background-color: rgb(170, 40, 144);
   z-index: -1;
   padding: 0;
   margin: 0;
   opacity: 0.9;
+}
+
+.home-page {
+  min-height: 100vh;      /* Full viewport height */
+  display: flex;          /* Use flexbox */
+  flex-direction: column; /* Stack items vertically */
+}
+
+.home-page > *:last-child {
+  margin-top: auto;       /* Push footer to bottom */
 }
 
 
