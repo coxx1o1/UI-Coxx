@@ -25,9 +25,9 @@ function Component() {
             </h2>
             {openList === "Background" && (
               <ul>
-                <li><Link to="/components/background1">Background1</Link></li>
-                <li><Link to="/components/background2">Background2</Link></li>
-                <li><Link to="/components/background3">Background3</Link></li>
+                <li><Link to="/components/background1" className="li-link">Background1</Link></li>
+                <li><Link to="/components/background2" className="li-link">Background2</Link></li>
+                <li><Link to="/components/background3" className="li-link">Background3</Link></li>
               </ul>
             )}
           </li>
@@ -39,9 +39,9 @@ function Component() {
             </h2>
             {openList === "Cards" && (
               <ul>
-                <li><Link to="/components/card1">Card1</Link></li>
-                <li><Link to="/components/card2">Card2</Link></li>
-                <li><Link to="/components/gojo">Gojo</Link></li>
+                <li><Link to="/components/card1" className="li-link">Card1</Link></li>
+                <li><Link to="/components/card2" className="li-link">Card2</Link></li>
+                <li><Link to="/components/gojo" className="li-link">Gojo</Link></li>
               </ul>
             )}
           </li>
@@ -53,8 +53,8 @@ function Component() {
             </h2>
             {openList === "Forms" && (
               <ul>
-                <li><Link to="/components/form1">Form1</Link></li>
-                <li><Link to="/components/form2">Form2</Link></li>
+                <li><Link to="/components/form1" className="li-link">Form1</Link></li>
+                <li><Link to="/components/form2" className="li-link">Form2</Link></li>
               </ul>
             )}
           </li>

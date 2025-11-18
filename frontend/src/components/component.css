@@ -70,3 +70,25 @@ li {
   text-decoration: none;
   color: inherit;
 }
+
+.li-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.li-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.li-link {
+  display: block;        /* makes full li area clickable */
+  padding: 10px 14px;    /* clickable padding */
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;        /* keeps your shiny-text color */
+  cursor: pointer;
+}
