@@ -22,3 +22,18 @@
 .section-body {
   padding: 10px;
 }
+
+.section-button {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 8px 12px;
+  border: 1px solid cyan;
+  border-radius: 6px;
+  background: rgba(0, 255, 255, 0.1);
+  color: #00eaff;
+}
+
+.main-section .section-button:nth-of-type(2) {
+  left: 100px;
+}

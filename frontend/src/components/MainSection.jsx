@@ -3,7 +3,16 @@ import "./MainSection.css";
 
 function MainSection({ title, children }) {
   return (
-    <section className="main-section">
+  <div className="section-container"
+  style={{
+    backgroundColor: "#363636ff",
+  }}> 
+    <section className="main-section"
+    style={{
+      backgroundColor: "#191919ff",
+    }}>
+      <button className="section-button">preview</button>
+      <button className="section-button">code</button>
       <header className="section-header">
         <h2>{title}</h2>
       </header>
@@ -12,6 +21,7 @@ function MainSection({ title, children }) {
         {children}
       </div>
     </section>
+    </div   >
   );
 }
 

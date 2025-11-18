@@ -17,8 +17,6 @@ function Component() {
         <h1 className="shiny-text">Index</h1>
 
         <ul>
-
-          {/* Background Section */}
           <li>
             <h2 className="shiny-text" onClick={() => handleClick("Background")}>
               Background
@@ -32,7 +30,6 @@ function Component() {
             )}
           </li>
 
-          {/* Cards Section */}
           <li>
             <h2 className="shiny-text" onClick={() => handleClick("Cards")}>
               Cards
@@ -46,7 +43,6 @@ function Component() {
             )}
           </li>
 
-          {/* Forms Section */}
           <li>
             <h2 className="shiny-text" onClick={() => handleClick("Forms")}>
               Forms
@@ -62,7 +58,6 @@ function Component() {
         </ul>
       </aside>
 
-      {/* Main Display */}
       <main className="main">
         <MainSection title="Main Preview">
           <Outlet />
