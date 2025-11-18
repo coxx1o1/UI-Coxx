@@ -59,3 +59,14 @@ ul {
 li {
   cursor: pointer;
 }
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.sidebar ul li a:hover {
+  text-decoration: none;
+  color: inherit;
+}
