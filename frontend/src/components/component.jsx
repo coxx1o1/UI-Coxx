@@ -1,20 +1,29 @@
 import React, { useContext } from "react";
 import { UIContext } from "../UIContext";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
+import Header from "./Header.jsx";
 import "./component.css";
 import MainSection from "./MainSection";
 
 function Component() {
   const { openList, setOpenList } = useContext(UIContext);
+  const navigate = useNavigate();
 
   function handleClick(listName) {
     setOpenList(openList === listName ? null : listName);
   }
 
+  function resetSidebar() {
+    setOpenList(null);
+    navigate("/components");
+  }
+
   return (
-    <div className="content">
+    <>
+      <Header showNav={false} />
+      <div className="content">
       <aside className="sidebar">
-        <h1 className="shiny-text">Index</h1>
+        <h1 className="shiny-text" onClick={resetSidebar}>Index</h1>
 
         <ul>
           <li>
@@ -59,11 +68,12 @@ function Component() {
       </aside>
 
       <main className="main">
-        <MainSection title="Main Preview">
+        <MainSection >
           <Outlet />
         </MainSection>
       </main>
     </div>
+    </>
   );
 }
 
