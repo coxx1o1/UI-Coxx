@@ -7,7 +7,7 @@ import Nav from "./components/nav.jsx";
 import Component from "./components/Component.jsx";
 import LiquidChrome from "./components/LiquidChrome.jsx";
 import Test from "./components/test.jsx";
-import Footer from "./components/footer.jsx"; 
+import Footer from "./components/footer.jsx";
 import Hero from "./components/Hero.jsx";
 import Background1 from "./components/background/Background1.jsx";
 import Background2 from "./components/background/Background2.jsx";
@@ -38,10 +38,14 @@ import form2Css from "./components/form/Form2.css?raw";
 function Home() {
   return (
     <div className="home-page">
-      <LiquidChrome />
+      <LiquidChrome
+        baseColor={[0.1, 0.2, 0.2]}
+        speed={0.4}
+        interactive={true}
+      />
       <Header />
       <Hero />
-          <Footer />  
+      <Footer />
     </div>
   );
 }
@@ -54,14 +58,70 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/components" element={<Component />}>
-            <Route path="background1" element={<WithCode code={background1Src} css={background1Css}><Background1 /></WithCode>} />
-            <Route path="background2" element={<WithCode code={background2Src} css={background2Css}><Background2 /></WithCode>} />
-            <Route path="background3" element={<WithCode code={background3Src} css={background3Css}><Background3 /></WithCode>} />
-            <Route path="card1" element={<WithCode code={card1Src} css={card1Css}><Card1 /></WithCode>} />
-            <Route path="card2" element={<WithCode code={card2Src} css={card2Css}><Card2 /></WithCode>} />
-            <Route path="gojo" element={<WithCode code={gojoSrc} css={gojoCss}><Gojo /></WithCode>} />
-            <Route path="form1" element={<WithCode code={form1Src} css={form1Css}><Form1 /></WithCode>} />
-            <Route path="form2" element={<WithCode code={form2Src} css={form2Css}><Form2 /></WithCode>} />
+            <Route
+              path="background1"
+              element={
+                <WithCode code={background1Src} css={background1Css}>
+                  <Background1 />
+                </WithCode>
+              }
+            />
+            <Route
+              path="background2"
+              element={
+                <WithCode code={background2Src} css={background2Css}>
+                  <Background2 />
+                </WithCode>
+              }
+            />
+            <Route
+              path="background3"
+              element={
+                <WithCode code={background3Src} css={background3Css}>
+                  <Background3 />
+                </WithCode>
+              }
+            />
+            <Route
+              path="card1"
+              element={
+                <WithCode code={card1Src} css={card1Css}>
+                  <Card1 />
+                </WithCode>
+              }
+            />
+            <Route
+              path="card2"
+              element={
+                <WithCode code={card2Src} css={card2Css}>
+                  <Card2 />
+                </WithCode>
+              }
+            />
+            <Route
+              path="gojo"
+              element={
+                <WithCode code={gojoSrc} css={gojoCss}>
+                  <Gojo />
+                </WithCode>
+              }
+            />
+            <Route
+              path="form1"
+              element={
+                <WithCode code={form1Src} css={form1Css}>
+                  <Form1 />
+                </WithCode>
+              }
+            />
+            <Route
+              path="form2"
+              element={
+                <WithCode code={form2Src} css={form2Css}>
+                  <Form2 />
+                </WithCode>
+              }
+            />
           </Route>
         </Routes>
       </Router>
