@@ -40,7 +40,7 @@ function Home() {
     <div className="home-page">
       <LiquidChrome
         baseColor={[0.1, 0.2, 0.2]}
-        speed={0.4}
+        speed={0.3}
         interactive={true}
       />
       <Header />
