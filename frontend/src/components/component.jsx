@@ -6,11 +6,14 @@ import "./component.css";
 import MainSection from "./MainSection";
 
 function Component() {
-  const { openList, setOpenList } = useContext(UIContext);
+  const { openList, setOpenList, setCurrentCode, setCurrentCss } = useContext(UIContext);
   const navigate = useNavigate();
 
   function handleClick(listName) {
     setOpenList(openList === listName ? null : listName);
+    setCurrentCode("");
+    setCurrentCss("");
+    navigate("/components");
   }
 
   function resetSidebar() {

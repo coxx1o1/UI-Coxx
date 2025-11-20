@@ -1,37 +1,41 @@
 .background3 {
-  position: absolute; /* same system as BG1 & BG2 */
+  position: absolute;
   top: 0;
   left: 0;
-
   width: 100%;
   height: 100%;
-
-  background: rgba(0, 0, 255, 0.2); /* debug color */
+  background: radial-gradient(1000px 600px at 50% 100%, #0b1220 0%, #0c0c12 60%, #0a0a0a 100%);
   overflow: hidden;
-  z-index: 1; /* keep above section but below UI elements */
+  z-index: 1;
 }
 
-/* star dot */
+.background3::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 2px) 0 0/3px 3px,
+    radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 2px) 0 0/6px 6px;
+  opacity: 0.6;
+  animation: starDrift 60s linear infinite;
+}
+
 .background3::after {
   content: "";
   position: absolute;
-  top: 100%; /* start animation BELOW the section */
-  left: 50%;
-
-  width: 1px;
-  height: 1px;
-
-  background: white;
-
-  animation: animStar 50s linear infinite;
+  inset: -10%;
+  background:
+    radial-gradient(ellipse at 60% 80%, rgba(0, 234, 255, 0.18), transparent 40%),
+    radial-gradient(ellipse at 20% 20%, rgba(255, 0, 170, 0.12), transparent 45%);
+  filter: blur(42px);
+  animation: glowFloat 18s ease-in-out infinite alternate;
 }
 
-/* animation */
-@keyframes animStar {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-200vh); /* safer than px */
-  }
+@keyframes starDrift {
+  from { background-position: 0 0, 0 0; }
+  to { background-position: 0 -200vh, 0 -120vh; }
+}
+
+@keyframes glowFloat {
+  to { transform: translate(24px, -16px) scale(1.05); }
 }

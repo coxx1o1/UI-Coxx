@@ -39,3 +39,42 @@
 .main-section .section-button:nth-of-type(2) {
   left: 100px;
 }
+.section-button.active {
+  background: rgba(0, 255, 255, 0.25);
+}
+.code-view {
+  color: #cfd8dc;
+  background: #101010;
+  border: 1px solid #1a8e6d;
+  border-radius: 8px;
+  padding: 12px;
+  max-height: 60vh;
+  overflow: auto;
+  white-space: pre-wrap;
+}
+.code-view + .code-view {
+  margin-top: 12px;
+}
+.code-toolbar {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+.toolbar-button {
+  padding: 6px 10px;
+  border: 1px solid cyan;
+  border-radius: 6px;
+  background: rgba(0, 255, 255, 0.08);
+  color: #00eaff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.1s ease, background-color 0.1s ease;
+}
+.toolbar-button:active { transform: scale(0.56); }
+.toolbar-button.copied {
+  transform: scale(1.06);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.2);
+  background: rgba(0, 255, 255, 0.5);
+}
