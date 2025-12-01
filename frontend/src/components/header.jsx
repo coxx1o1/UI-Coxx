@@ -3,7 +3,7 @@ import "./header.css";
 import Nav from "./nav.jsx";
 import { Link } from "react-router-dom";
 
-function Header({ showNav = true }) {
+function Header({ showNav }) {
   return (
     <header>
       <h2 className="name-tag">
